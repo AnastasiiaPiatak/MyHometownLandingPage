@@ -16,3 +16,21 @@ transform: scale(0);
 .list a:hover::after{
 transform: scale(1);
 }
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.pictures-carousel{
+    padding: 0;
+}
+
+.pictures-carousel .carousel-item{
+    
+    max-height: 600px;
+}
+
+.pictures-carousel .carousel-item img{
+    object-fit: cover;
+}
