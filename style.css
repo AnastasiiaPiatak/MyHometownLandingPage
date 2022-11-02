@@ -1,0 +1,18 @@
+.nav-link{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.list a::after{
+content: "";
+display: block;
+width: 100%;
+background-color: #5D5D5D;
+height: 1px;
+transition: all .3s;
+transform: scale(0);
+}
+
+.list a:hover::after{
+transform: scale(1);
+}
