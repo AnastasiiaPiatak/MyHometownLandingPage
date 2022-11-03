@@ -4,10 +4,6 @@ body {
   font-family: "Alice", serif;
 }
 /*Content*/
-.navbar-brand {
-  font-family: "Sacramento", cursive;
-  font-size: 220%;
-}
 
 h1 {
   color: #c19898;
@@ -24,6 +20,25 @@ p {
 }
 
 /*Navbar*/
+.navigation{
+    position: fixed;
+   width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    border-top: 0;
+   
+}
+
+:target{
+    scroll-margin-top: 76px;
+}
+
+.navbar-brand {
+  font-family: "Sacramento", cursive;
+  font-size: 220%;
+}
+
 .nav-link {
   text-transform: uppercase;
   font-weight: 500;
