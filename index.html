@@ -34,7 +34,7 @@
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="#carousel">Mukachevo</a>
-          <a href="#"><i class="fa-solid fa-sun" id="light_icon"></i></a>
+          <a href="#" id="light_icon"><i class="fa-solid fa-sun"></i></a>
           <button
             class="navbar-toggler"
             type="button"
@@ -337,16 +337,25 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      let icon = document.querySelector("#light_icon");
-      icon.addEventListener("click", changeTheme);
+      let icon_link = document.querySelector("#light_icon");
+      icon_link.addEventListener("click", changeTheme);
 
       function setLightTheme() {
         document.body.classList.add("light");
         localStorage.theme = "light";
+        let icon = document.querySelector("i");
+        icon.classList.toggle('fa-sun');
+         icon.classList.toggle('fa-moon');
+         
+       
+
       }
       function setDarkTheme() {
         document.body.classList.remove("light");
         localStorage.theme = "dark";
+        let icon = document.querySelector("i");
+        icon.classList.toggle('fa-moon');
+         icon.classList.toggle('fa-sun');
       }
 
       function changeTheme() {
@@ -360,7 +369,6 @@
         setLightTheme();
       }
 
-      //#light_icon
     </script>
   </body>
 </html>
