@@ -14,10 +14,58 @@ body {
 
 h1 {
   color: #c19898;
-  margin-left: 2.5%;
+  margin-left: 5%;
   font-size: 350%;
   font-weight: 300;
+   
   font-family: "Sacramento", cursive;
+   font-style: italic;
+}
+
+#history{
+    margin-left: 17%;
+     font-style: italic;
+
+}
+
+.history_beginning{
+  font-size: 23px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.history_italic{
+ 
+  font-family: "Sacramento", cursive; 
+  font-style: italic;
+    font-size: 25px;
+    line-height: 1;
+
+}
+
+#places{
+  text-align: center;
+}
+
+.places_cards{
+  margin: 0 5%;
+}
+
+.card{
+  background-color: transparent;
+}
+
+.card-title{
+  font-family: "Sacramento", cursive; 
+  font-style: italic;
+  font-size: 25px;
+   color: #c19898;
+   text-align: center;
+}
+
+.card-text{
+  text-align: center;
+  font-size: 15px;
 }
 
 p {
