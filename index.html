@@ -11,7 +11,7 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -28,6 +28,230 @@
       src="https://kit.fontawesome.com/fadd0a7b7b.js"
       crossorigin="anonymous"
     ></script>
+    <style>
+      /*LightDarkMode*/
+      .light {
+        background-color: #ebebe3;
+        color: #212529;
+      }
+
+      body {
+        transition: all 0.3s ease-in;
+        background-color: #212529;
+        color: #ebebe3;
+        font-family: "Alice", serif;
+      }
+      /*Content*/
+
+      h1 {
+        color: #c19898;
+        margin-left: 5%;
+        font-size: 350%;
+        font-weight: 300;
+        font-family: "Sacramento", cursive;
+        font-style: italic;
+      }
+
+      #history {
+        margin-left: 19%;
+        text-align: left;
+        font-style: italic;
+      }
+
+      .history_beginning {
+        font-size: 4vmin;
+        font-weight: bold;
+        text-align: left;
+      }
+
+      .history_italic {
+        font-family: "Sacramento", cursive;
+        font-style: italic;
+        font-size: 4vmin;
+        line-height: 1;
+      }
+
+      .history_main {
+        font-size: 2vmin;
+        line-height: 1.5;
+      }
+
+      #places {
+        text-align: center;
+      }
+
+      .places_cards {
+        margin: 0 5%;
+      }
+
+      .card {
+        background-color: transparent;
+      }
+
+      .card-title {
+        font-family: "Sacramento", cursive;
+        font-style: italic;
+        font-size: 25px;
+        color: #c19898;
+        text-align: center;
+      }
+
+      .card-text {
+        text-align: center;
+        font-size: 15px;
+      }
+
+      /*Navbar*/
+      .navigation {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: 100;
+        border-top: 0;
+      }
+
+      :target {
+        scroll-margin-top: 76px;
+      }
+
+      .navbar-brand {
+        font-family: "Sacramento", cursive;
+        font-size: 220%;
+        margin: 0 15px;
+      }
+
+      .nav-link {
+        text-transform: uppercase;
+        font-weight: 500;
+        margin: 0 15px;
+      }
+
+      .list a::after {
+        content: "";
+        display: block;
+        width: 100%;
+        background-color: #5d5d5d;
+        height: 1px;
+        transition: all 0.3s;
+        transform: scale(0);
+      }
+
+      .list a:hover::after {
+        transform: scale(1);
+      }
+
+      #light_icon {
+        padding: 10px;
+        flex: 1;
+        text-align: left;
+        font-size: 20px;
+        cursor: pointer;
+        color: #c7c6c4;
+      }
+
+      .navbar-nav {
+        flex: 3;
+        justify-content: end;
+        text-align: end;
+      }
+
+      /*Carousel*/
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .pictures-carousel {
+        padding: 0;
+      }
+
+      .pictures-carousel .carousel-item {
+        max-height: 600px;
+      }
+
+      .pictures-carousel .carousel-item img {
+        object-fit: cover;
+      }
+
+      /*Gallery*/
+      #gallery {
+        text-align: center;
+      }
+
+      .container .img-container {
+        columns: 3 250px;
+        gap: 15px;
+      }
+
+      .container .img-container img {
+        margin-bottom: 10px;
+        border-radius: 5px;
+        width: 100%;
+      }
+
+      /*Footer*/
+      .footer {
+        background-color: #141619;
+        color: #ebebe3;
+      }
+
+      h4 {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 16px;
+        color: #c19898;
+        border-bottom: 1px solid #c19898;
+        padding-bottom: 3px;
+      }
+
+      .footer a {
+        text-decoration: none;
+        color: #ebebe3;
+        transition: all 0.3s;
+      }
+      .footer li {
+        color: #ebebe3;
+      }
+
+      .footer a:hover {
+        color: #c19898;
+      }
+      .know_more,
+      .contacts,
+      .social_media {
+        padding: 10px;
+      }
+
+      div .know_more {
+        text-align: center;
+      }
+
+      .know_more li {
+        display: inline;
+        margin: 5px;
+      }
+
+      .footer_icons {
+        text-align: center;
+      }
+
+      .footer_icons a {
+        display: inline-block;
+        margin: 0 10px;
+        font-size: 20px;
+      }
+
+      .source_link {
+        text-align: center;
+        padding: 0 0 10px 0;
+      }
+
+      .coder_name {
+        color: #c19898;
+      }
+    </style>
   </head>
   <body>
     <div class="navigation">
@@ -248,7 +472,7 @@
         </div>
       </div>
     </div>
-    <br>
+    <br />
     <div class="container">
       <h1 id="gallery">Gallery</h1>
       <div class="img-container">
@@ -299,15 +523,26 @@
               <h4>Know more</h4>
               <ul class="list-unstyled know_more">
                 <li>
-                  <a href="https://en.wikipedia.org/wiki/Mukachevo" target="_blank">Wiki</a>
+                  <a
+                    href="https://en.wikipedia.org/wiki/Mukachevo"
+                    target="_blank"
+                    >Wiki</a
+                  >
                 </li>
-                <li><a href="http://www.mukachevo.net/" target="_blank">News</a></li>
                 <li>
-                  <a href="https://goo.gl/maps/W9dSVavf2Xj5AD686" target="_blank">Maps</a>
+                  <a href="http://www.mukachevo.net/" target="_blank">News</a>
                 </li>
                 <li>
                   <a
-                    href="https://www.accuweather.com/en/ua/mukachev%D0%BE/326292/weather-forecast/326292" target="_blank"
+                    href="https://goo.gl/maps/W9dSVavf2Xj5AD686"
+                    target="_blank"
+                    >Maps</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.accuweather.com/en/ua/mukachev%D0%BE/326292/weather-forecast/326292"
+                    target="_blank"
                     >Weather</a
                   >
                 </li>
@@ -323,8 +558,10 @@
                   >
                 </li>
                 <li>
-                  Photos by <a href="https://www.facebook.com/ovsabo" target="_blank">Oleksandr Sabo</a>
-                  
+                  Photos by
+                  <a href="https://www.facebook.com/ovsabo" target="_blank"
+                    >Oleksandr Sabo</a
+                  >
                 </li>
                 <li>
                   Dukhnovycha street, 2, Mukachevo, Transcarpathian region,
@@ -359,7 +596,9 @@
           </div>
           <div class="row">
             <div class="col-md-12 source_link">
-              <a href="https://github.com/AnastasiiaPiatak" target="_blank">Open-source code</a>
+              <a href="https://github.com/AnastasiiaPiatak" target="_blank"
+                >Open-source code</a
+              >
               by <span class="coder_name">Anastasiia Piatak</span>
             </div>
           </div>
