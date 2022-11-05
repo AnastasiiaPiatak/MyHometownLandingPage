@@ -23,13 +23,14 @@ h1 {
 }
 
 #history{
-    margin-left: 17%;
+    margin-left: 19%;
+    text-align: left;
      font-style: italic;
 
 }
 
 .history_beginning{
-  font-size: 23px;
+  font-size: 4vmin;
   font-weight: bold;
   text-align: left;
 }
@@ -38,9 +39,14 @@ h1 {
  
   font-family: "Sacramento", cursive; 
   font-style: italic;
-    font-size: 25px;
+    font-size: 4vmin;
     line-height: 1;
 
+}
+
+.history_main{
+   font-size: 2vmin;
+   line-height: 1.5;
 }
 
 #places{
@@ -68,11 +74,6 @@ h1 {
   font-size: 15px;
 }
 
-p {
-  padding: 0 15px;
-  line-height: 1.5;
-  text-align: justify;
-}
 
 /*Navbar*/
 .navigation {
